@@ -1,0 +1,20 @@
+quarkus:
+  http:
+    port: 8085
+  log:
+    level: INFO
+  hibernate-orm:
+    database:
+      generation: drop-and-create
+    log:
+      sql: true
+    dialect: org.hibernate.dialect.PostgreSQL10Dialect
+    jdbc:
+      timezone: UTC
+  datasource:
+    db-kind: postgresql
+    username: username
+    password: mysecretpassword
+    url: vertx-reactive:postgresql://localhost:5432/developers
+    reactive:
+      max-size: 20
